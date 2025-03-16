@@ -258,10 +258,10 @@ class ThemeExtractor:
 if __name__ == "__main__":
     # 预设参数，无需通过命令行输入
     preset_args = {
-        "excel": "nrfx/dataset/03-input_小量文本测试集.xlsx",  # Excel文件路径
-        "column": "Title",  # 包含文本数据的列名
-        "api_key": "sk-TotNw1nIUNJ6QKOvHaihightLOr68RDy1w4sXBvAasGKbUTU",  # OpenAI API密钥
-        "db": "nrfx/themes_results.db",  # SQLite数据库路径
+        "excel": "nrfx/dataset/提取失败数据.xlsx",  # Excel文件路径
+        "column": "original_text",  # 包含文本数据的列名
+        "api_key": "sk-v2BwWGUVJxaQBUjlGX9yMfHjhYFtDTD9usibqsHeFcrzjBzd",  # OpenAI API密钥
+        "db": "nrfx/01-failed-preprocessed.db",  # SQLite数据库路径
         "batch_size": 100,  # 异步批处理大小
         "limit": None,  # 处理的最大记录数，None表示不限制
         "model": "gpt-4o"  # OpenAI模型名称
