@@ -14,10 +14,10 @@ class ThemeExtractor:
                  excel_path: str = "小量文本测试集.xlsx", 
                  api_key: str="sk-TotNw1nIUNJ6QKOvHaihightLOr68RDy1w4sXBvAasGKbUTU", 
                  db_path: str = "themes_results.db",
-                 batch_size: int = 10,
+                 batch_size: int = 100,
                  max_retries: int = 3,
                  retry_delay: int = 5,
-                 model: str = "gpt-4o",
+                 model: str = "gpt-4o-mini",
                  system_prompt_template: str = None):
         """
         初始化主题提取器
@@ -256,13 +256,13 @@ class ThemeExtractor:
 if __name__ == "__main__":
     # 预设参数，无需通过命令行输入
     preset_args = {
-        "excel": "nrfx/小量文本测试集.xlsx",  # Excel文件路径
-        "column": "Title",  # 包含文本数据的列名
-        "api_key": "sk-TotNw1nIUNJ6QKOvHaihightLOr68RDy1w4sXBvAasGKbUTU",  # OpenAI API密钥
-        "db": "nrfx/themes_results.db",  # SQLite数据库路径
-        "batch_size": 5,  # 异步批处理大小
+        "excel": "nrfx/03-analy/01-input-rawdata.xlsx",  # Excel文件路径
+        "column": "original_text",  # 包含文本数据的列名
+        "api_key": "sk-kvH38CjwA1PTazUrgmF0WR8I1s8sjtHd6TveYTYAxddEfMQh",  # OpenAI API密钥
+        "db": "nrfx/03-analy/01-themes_results.db",  # SQLite数据库路径
+        "batch_size": 100,  # 异步批处理大小
         "limit": None,  # 处理的最大记录数，None表示不限制
-        "model": "gpt-4o"  # OpenAI模型名称
+        "model": "gpt-4o-mini"  # OpenAI模型名称
     }
     
     # 默认提示词模板

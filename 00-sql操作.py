@@ -27,9 +27,9 @@ def export_data(db_path: str, output_path: str, table_name: str):
 
 if __name__ == "__main__":
 
-    db_path = "nrfx/01-failed-preprocessed.db"
-    output_path = "nrfx/dataset/03-output_failed-preprocessed_data.xlsx"
-    table_name = "preprocessed_data"
+    db_path = "nrfx/03-analy/01-themes_results.db"
+    output_path = "nrfx/03-analy/01-themes_results_data.xlsx"
+    table_name = "themes"
 
     export_data(db_path, output_path, table_name)
     # delete_data(db_path, table_name)
